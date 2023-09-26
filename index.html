@@ -2,272 +2,217 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/2a178011b3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-   
+    <script src="https://kit.fontawesome.com/2a178011b3.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <!--Header Start-->
     <header>
-        <div class="logo">
-            <a href="#"><img src="logo.webp" alt="personal"></a>
-        </div>
-        <div class="nav">
-            <input type="checkbox" id="check">
-           <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-            </label>
-            <ul>
-                <li><a href="#" style="color: #7f97ff;">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#Pricing">Pricing</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-    <!--Header End-->
-
-    <!--Section One Start-->
-    <section class="section1">
-            <div class="half1">
-                <h3>THIS IS ME</h3>
-                
-                <h1>MD NADIM MOSTOFA</h1>
-                
-                <p>You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures.</p>
-                
-                <input type="button" value="DISCOVER NOW">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#" style="text-decoration: none;"><h1 class="logo" style="font-size: 36px; color:#ff004f;">`~NM~`</h1></a>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Protfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi,I'm <span>Nadim</span> Mostofa <br>
+                And I'm Fontend Developer.
+                </h1>
             </div>
-            <div class="half2">
-                <img src="InShot_20230206_220247766.jpg" alt="Man">
-            </div>
-    </section>
-    <!--Section One End-->
-
-    <!--Section TWO Start-->
-    <section class="section2" id="About">
-        <div class="img2">
-            <img src="man2.webp" alt="Man">
         </div>
-        <div class="text2">
-            <h3> ABOUT ME</h3><br>
-            <h1> PERSONAL DETAILS</h1> <br>
-            <p> Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. <br>
-            <input type="button" value="VIEW FULL DETAILS">
-        </div>
-    </section>
-    <!--Section TWO END-->
-
-    <!--Section threeStart-->
-    <section class="section3" id="Services">
-        <div class="firsttext">
-            <h1> My Offered Services</h1>
-            <p> At about this time of year, some months after New Years resolutions have been made and kept, or made and neglected.</p>
-        </div>
-        <div class="service">
-            <div class="ser1">
-                <div>
-                    <i class="fa-solid fa-chart-pie"></i>
-                    <h3> Web Design</h3>
-                    <p>“It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”</p>
+    </div>
+</header>
+    <!-- /* about strat */ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="abou-col-1">
+                    <img src="IMG-20220711-WA0032-01.jpeg" alt="" width="350px" height="470px">
                 </div>
-                <div>
-                    <i class="fa-solid fa-laptop"></i>
-                   <h3> Web Devlopment</h3>
-                   <p>If you are an entrepreneur, you know that your success cannot depend on the opinions of others. Like the wind, opinions.</p>
-        
-                </div>
-                <div>
-                    <i class="fas fa-camera"></i>
-                    <h3>Photography</h3>
-                    <p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills.</p>
+                <div class="abou-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora dolor quidem, quos dolorum fugiat ea deleniti, error ducimus, aut autem iure delectus nobis ipsum architecto expedita? At quis velit id? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero quia facere sint sit cumque architecto officiis aliquam facilis commodi.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('experiencs')">Experiencs</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Graphics</span> <br>Designing Web/App interface.</li>
+                            <li><span>Web Development</span> <br>Creat at Web page/app Devlopment.</li>
+                            <li><span>Writter</span> <br>Artical and Books Writting.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="experiencs">
+                        <ul>
+                            <li><span>2023 - Current</span> <br>Graphics Design at Trainer in KurigramT.T.C.</li>
+                            <li><span>2022 - 2023</span> <br>Team lead at StrarWebsite LLC.</li>
+                            <li><span>2021 - 2022</span> <br>Writter at Rangpur Zilla Proshod Computer Alor Patha.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 </span> <br>Graphics Design at Training in KurigramTTC. </li>
+                            <li><span>2022</span> <br>Web Development at Hablu Programmer Comunity.</li>
+                            <li><span>2022</span> <br>Writter Traning at Rangpur Zilla Proshod Computer Alor Patha.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="ser2">
+
+        </div>
+    </div>
+    <!-- /* about end */ -->
+<!-- services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
                 <div>
-                    <i class="fa-solid fa-image"></i>
-                    <h3> Clipping Path</h3>
-                    <p>Hypnosis quit smoking methods maintain caused quite a stir in the medical world over the last two decades. There is a lot of argument.</p>
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h2>Graphics Design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt consequuntur dolore ipsa? Labore enim itaque quibusdam id distinctio officiis.</p>
+                    <a href="#">Learn more</a>
                 </div>
                 <div>
-                    <i class="fas fa-mobile-alt"></i>
-                   <h3> Apps Interface</h3>
-                   <p>Do you sometimes have the feeling that you’re running into the same obstacles over and over again? Many of my conflicts.</p>
-            
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt consequuntur dolore ipsa? Labore enim itaque quibusdam id distinctio officiis.</p>
+                    <a href="#">Learn more</a>
                 </div>
                 <div>
-                    <i class="fa-sharp fa-solid fa-rocket"></i>
-                    <h3>Graphic Design</h3>
-                    <p>You’ve heard the expression, “Just believe it and it will come.” Well, technically, that is true, however, ‘believing’ is not just thinking that.</p>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h2>Writter</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt consequuntur dolore ipsa? Labore enim itaque quibusdam id distinctio officiis.</p>
+                    <a href="#">Learn more</a>
                 </div>
             </div>
         </div>
-            
-
-        
-    </section>
-     <!--Section three END-->
-
-     <!--Section four strat-->
-     <section class="section4">
-        <div>
-            <h1>2536</h1>
-            <p>Projects Completed</p>
-        </div>
-        <div>
-            <h1>6784</h1>
-            <p>Happy Clients</p>
-        </div>
-        <div>
-            <h1>2239</h1>
-            <p>Cups of Coffee</p>
-        </div>
-        <div>
-            <h1>434</h1>
-            <p>Real Professionals</p>
-        </div>
-
-     </section>
-     <!--Section four END-->
-
-      <!--Section five strat-->
-     <section class="section5" id="Pricing">
-        <div class="text3">
-            <h1>Our Latest Featured Projects</h1>
-            <p>Who are in extremely love with eco friendly system.</p>
-        </div>
-        <div class="imgg">
-            <div>
-                <figure>
-                    <img src="01.webp">
-                </figure>
-                <h1>2D Vinyl Design</h1>
-                <p>vector</p>
+         
+    </div>
+<!-- Protfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="socialbook.png" alt="">
+                <div class="layer">
+                    <h3>Social Media Page</h3>
+                    <p> I Will Make a Social Media  Profile Page use for HTML,CSS & JavaScript.</p>
+                    <a href="https://nadimmo.github.io/FacebookPage/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
             </div>
-            <div>
-                <figure>
-                    <img src="02.webp">
-                </figure>
-                <h1>2D Vinyl Design</h1>
-                <p>vector</p>
+            <div class="work">
+                <img src="linkedpage.png" alt="">
+                <div class="layer">
+                    <h3>Linked Page</h3>
+                    <p>I Will Make a Linked Profile Page use for HTML,CSS & JavaScript.</p>
+                    <a href="https://nadimmo.github.io/LinkedPage/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
             </div>
-            <div>
-                <figure>
-                    <img src="03.webp">
-                </figure>
-                <h1>2D Vinyl Design</h1>
-                <p>vector</p>
-            </div>
-            <div>
-                <figure>
-                    <img src="04.webp">
-                </figure>
-                <h1>2D Vinyl Design</h1>
-                <p>vector</p>
-            </div>
-            <div>
-                <figure>
-                    <img src="05.webp">
-                </figure>
-                <h1>2D Vinyl Design</h1>
-                <p>vector</p>
-            </div>
-            <div>
-                <figure>
-                    <img src="06.webp">
-                </figure>
-                <h1>2D Vinyl Design</h1>
-                <p>vector</p>
+            <div class="work">
+                <img src="youtube.png" alt="">
+                <div class="layer">
+                    <h3>YouTube Page</h3>
+                    <p>I Will Make a YouTube Page use for HTML,CSS & JavaScript.</p>
+                    <a href="https://nadimmo.github.io/YouTubePage/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
             </div>
         </div>
-    </section>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
 
-      <!--Section five End-->
-      
-      <!--Section six strat-->
-      <section class="section6">
-        <div class="text4">
-            <h1>Choose Your Plan</h1>
-            <h5>When someone does something that they know that they shouldn’t do, did they.</h5>
-        </div>
-        <div class="card">
-            <div class="card1">
-                <h1>01</h1>
-                <h2>Economy</h2>
-                <h5>For the individuals</h5>
-                <hr>
-                <h5>Secure Online Transfer</h5>
-                <hr>
-                <h5>Unlimited Styles for interface</h5>
-                <hr>
-                <h5>Reliable Customer Service</h5>
-                <h1 class="price">$100.00</h1>
-                <input type="button" value="Buy Now">
+<!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>contact@exmaple.com</p>
+                <p> <i class="fa-solid fa-phone"></i>01949643367</p>
+                <div class="social-icon">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="Document 4.pdf" download class="btn btn2">Download CV</a>
             </div>
-            <div class="card1">
-                <h1>02</h1>
-                <h2>Business</h2>
-                <h5>For the individuals</h5>
-                <hr>
-                <h5>Secure Online Transfer</h5>
-                <hr>
-                <h5>Unlimited Styles for interface</h5>
-                <hr>
-                <h5>Reliable Customer Service</h5>
-                <h1 class="price">$120.00</h1>
-                <input type="button" value="Buy Now">
-            </div>
-            <div class="card1">
-                <h1>03</h1>
-                <h2>Premium</h2>
-                <h5>For the individuals</h5>
-                <hr>
-                <h5>Secure Online Transfer</h5>
-                <hr>
-                <h5>Unlimited Styles for interface</h5>
-                <hr>
-                <h5>Reliable Customer Service</h5>
-                <h1 class="price">$130.00</h1>
-                <input type="button" value="Buy Now">
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2"> Submit</button>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
+    </div>
+    <div class="copyright">
+        <p> All Copyright Reserved @ Made by <i class="fas fa-heart"></i> Nadim Mostofa.</p>
+    </div>
+</div>
+<!-- javascript part-->
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents ');
 
-      </section>
-      <!--Section six End-->
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add('active-links');
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
 
-      <!--footer seven strat-->
-      <footer id="footer">
-        <div class="foot">
-            <div class="foot1">
-                <h1 style="text-align: center;">About Me</h1>
-                <p style="width:410px;">We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.<p>
-                 <p>Copyright ©2023 All rights reserved  by Nadim Mostofa<p>
-            </div>
-            <div class="foot1">
-                <h1 style="text-align: center;">Newsletter</h1>
-                <p style="text-align: center;">Stay updated with our latest trends <p>
-                 <input type="text" placeholder="Enter Your Email Address">
-                 <button>Send</button>
-            </div>
-            <div class="foot1">
-                <h1>Follow Me </h1>
-                <p>Let us be social<p>
-                 <i class="fab fa-facebook"></i>
-                 <i class="fab fa-twitter"></i>
-                 <i class="fab fa-instagram"></i>
-                 <i class="fab fa-youtube"></i>
-                 
-            </div>
-        </div>
-      </footer>
+    <script>
+        var sidemenu = document.getElementById('sidemenu')
 
-      <!--footer seven end-->
-
-
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+<!-- form part -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxfUH2EGHG8bPtR3gJWYe6K1RYubAzJ3NyDQJZzbMv9FGntPT-faftEm14O-6Eug9oI/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = 'Message sent successfully'
+            setTimeout(function(){
+                msg.innerHTML = ''
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
